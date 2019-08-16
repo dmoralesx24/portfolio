@@ -244,7 +244,7 @@ $(function () {
 		submitHandler: function() {
 			$.ajax({
 				url: 'mailer/feedback.php',
-				type: 'post',
+				type: 'POST',
 				dataType: 'json',
 				data: 'name='+ $("#cform").find('input[name="name"]').val() + '&email='+ $("#cform").find('input[name="email"]').val() + '&message=' + $("#cform").find('textarea[name="message"]').val(),
 				beforeSend: function() {
@@ -342,7 +342,7 @@ $(function () {
 */
 
 function initMap() {
-	var myLatlng = new google.maps.LatLng(48.859003, 2.345275); // <- Your latitude and longitude
+	var myLatlng = new google.maps.LatLng(39.8630198,-75.4394011); // <- Your latitude and longitude
 	var styles = [
 		{
 			"stylers": [
@@ -388,6 +388,6 @@ function initMap() {
 	var marker = new google.maps.Marker({
 		position: myLatlng,
 		map: map,
-		title: 'We are here!'
+		title: "I'm around here!"
 	});
 }
